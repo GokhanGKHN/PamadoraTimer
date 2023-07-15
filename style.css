@@ -1,7 +1,7 @@
 :root {
     font-size: 62.5%; /*1rem =16px*/
     --color-primary: #181823;
-    --color-secondary: #537FE7;
+    --color-secondary: #ff0606;
     --color-font: #FFF4E0;
     --color-shadow: #537FE7;
 }
@@ -93,4 +93,45 @@ section{
     height: 26rem;
     border-radius: 50%;
     background-color: var(--color-secondary);
+    position: relative;
+}
+
+.circle::before{
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+
+}
+
+.time{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.time p{
+    font-size: 5.6rem;
+}
+
+.time p:nth-of-type(2){
+    position: relative;
+    top: -.5rem;
+    margin-inline: 1rem;
+}
+
+.controls{
+    margin-top: 3rem;
+}
+
+.controls button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;    
+}
+
+.controls #reset {
+    display: none;
 }
